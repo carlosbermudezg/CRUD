@@ -17,4 +17,6 @@ body, .App{
   align-items: center;
   background-color: var(--text-color);
   font-weight: 400;
+  box-sizing: border-box;
+  max-width: 100%;
 }

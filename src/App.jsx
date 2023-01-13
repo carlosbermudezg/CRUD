@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css'
+import Load from './assets/Components/Load';
 import ProductsForm from './assets/Components/ProductsForm';
 import ProductsList from './assets/Components/ProductsList';
 
@@ -10,10 +11,10 @@ function App() {
   const [updateProducts, setUpdateProducts] = useState(null);
   const [data, useData] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
-  const [isError, setIsError] = useState(false);
   const [isCreated, setIsCreated] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const [isUpdate, setIsUpdate,] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   //Function
 
@@ -131,11 +132,13 @@ function App() {
       modifyObject={modifyObject}
     />;
 
+    const componentLoad= <Load/>
+
  
   return (
     <div className="App">
 
-      {isLoad&&<h2>cargando ...</h2>}
+      {isLoad&&componentLoad}
       {isCreated&&<h2>creado con exito</h2>}
       {isDelete&&<h2>Delete con exito</h2>}
       {isUpdate&&<h2>Update con exito</h2>}
