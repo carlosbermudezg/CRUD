@@ -1,0 +1,137 @@
+
+.form {
+  width: 400px;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-elevation-medium);
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.form:hover {
+  box-shadow: var(--shadow-elevation-high);
+  cursor: pointer;
+}
+
+.form__div {
+  min-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.form__div--label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  width: 100%;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.label__div--input {
+  box-sizing: border-box;
+  padding: 5px 10px 5px 10px;
+  border: 0;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  height: 25px;
+  outline: none;
+  background-color: var(--tertiary-color);
+}
+
+.form__label--inputCheckbox {
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
+}
+
+.form-button {
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 8px;
+  border-radius: 5px;
+  width: 120px;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+}
+
+.form-button:hover {
+  box-shadow: var(--shadow-elevation-high);
+  cursor: pointer;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ul__li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--tertiary-color);
+  box-shadow: var(--shadow-elevation-medium);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px;
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ul__li--h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ul__li--h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.ul__li--h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.ul__li--div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul__li--button {
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 8px;
+  border-radius: 5px;
+  width: 120px;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+  margin-right: 10px;
+}
+
+.ul__li--button:hover {
+  box-shadow: var(--shadow-elevation-high);
+  cursor: pointer;
+}

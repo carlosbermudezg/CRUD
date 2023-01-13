@@ -9,10 +9,12 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
     if (sendAppToForm === null) {
       sendOfProducsForm(data);
       reset(
-        { name: '', 
-        category: '', 
-        price: '', 
-        isAvailable: false }
+        {
+          name: '',
+          category: '',
+          price: '',
+          isAvailable: false
+        }
       )
     } else {
       sendFormToApp(data);
@@ -22,10 +24,12 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
   useEffect(() => {
     if (sendAppToForm === null) {
       reset(
-        { name: '', 
-        category: '', 
-        price: '', 
-        isAvailable: false }
+        {
+          name: '',
+          category: '',
+          price: '',
+          isAvailable: false
+        }
       )
 
     } else {
@@ -34,43 +38,43 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
   }, [sendAppToForm])
 
   return (
-    <form onSubmit={handleSubmit(getFormData)}>
-
-      <label htmlFor="name-id">Name
-        <input
+    <form className="form" onSubmit={handleSubmit(getFormData)}>
+      <div className='form__div'>
+        <label className="form__div--label" htmlFor="name-id">Name</label>
+        <input className='label__div--input'
           type="text"
           id="name-id"
           {...register('name')}
         />
-      </label>
-
-      <label htmlFor="category-id">Category
-        <input
+      </div>
+      <div className='form__div'>
+        <label className="form__div--label" htmlFor="category-id">Category </label>
+        <input className='label__div--input'
           type="text"
           id="category-id"
           {...register('category')}
         />
-      </label>
-
-      <label htmlFor="price-id">Price
-        <input
+      </div>
+      <div className='form__div'>
+        <label className="form__div--label" htmlFor="price-id">Price </label>
+        <input className='label__div--input'
           type="number"
           id="price-id"
           {...register('price')}
         />
-      </label>
-
-      <label htmlFor="isAvailable-id">Price
-        <input
+      </div>
+      <div className='form__div'>
+        <label className="form__div--label" htmlFor="isAvailable-id">Available </label>
+        <input className='label__div--input form__label--inputCheckbox'
           type="checkbox"
           id="isAvailable-id"
           {...register('isAvailable')}
         />
-      </label>
+      </div>
 
-
-      <button type='submit'>{submitButton}</button>
+      <button className="form-button" type='submit'>{submitButton}</button>
     </form>
+
   );
 };
 
