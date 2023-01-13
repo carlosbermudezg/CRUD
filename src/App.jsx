@@ -21,9 +21,9 @@ function App() {
 
   function timeInScreen(setHook) {
     setHook(true)
-    // setTimeout(() => {
-    //   setHook(false)
-    // }, 3000)
+    setTimeout(() => {
+      setHook(false)
+    }, 3000)
   }
 
   //  GET request 
