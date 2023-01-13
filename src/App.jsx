@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css'
-import Create from './assets/Components/PopUp';
 import Load from './assets/Components/Load';
 import ProductsForm from './assets/Components/ProductsForm';
 import ProductsList from './assets/Components/ProductsList';
@@ -137,15 +136,15 @@ function App() {
     const componentLoad= <Load/>
     const componentCreate= <PopUp
     text={'Producto creado con exito!'}
-    imagen={`cheque.png`}
+    imagen={'cheque.png'}
     />
     const componentDelete= <PopUp
     text={'Producto eliminado con exito!'}
-    imagen={`delete.png`}
+    imagen={'delete.png'}
     />
     const componentEdit= <PopUp
     text={'Producto modificado con exito!'}
-    imagen={`edit.png`}
+    imagen={'edit.png'}
     />
     
 
