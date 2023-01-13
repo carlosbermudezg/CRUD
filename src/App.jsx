@@ -119,7 +119,7 @@ function App() {
   // componentes
   const componentProductsForm =
     <ProductsForm
-      submitButton={'Send'}
+      submitButton={'Crear'}
       sendOfProducsForm={sendOfProducsForm}
       sendAppToForm={updateProducts}
       sendFormToApp={sendFormToApp}

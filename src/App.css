@@ -66,6 +66,8 @@
   width: 120px;
   margin-top: 10px;
   transition: all 0.5s ease;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .form-button:hover {
@@ -201,6 +203,7 @@ span{
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  transition: all 1s;  
 }
 
 .div__h2--popUp{
