@@ -24,7 +24,7 @@ function requests(url, body, id) {
     };
   };
 
-  useEffect(() => {
+  const getDataEffect = ()=> useEffect(() => {
     getData()
   }, []);
 
@@ -90,8 +90,9 @@ function requests(url, body, id) {
 
   return {
     //PETICION GET
-    data,
     getData,
+    data,
+    getDataEffect,
     isError,
     isLoad,
     //PETICION POST

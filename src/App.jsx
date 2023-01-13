@@ -5,6 +5,7 @@ import Load from './assets/Components/Load';
 import ProductsForm from './assets/Components/ProductsForm';
 import ProductsList from './assets/Components/ProductsList';
 import PopUp from './assets/Components/PopUp';
+import Error from './assets/Components/Error';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
         useData(reply.data)
       }
     } catch (error) {
-      setIsError(error);
+      timeInScreen(setIsError);
 
     } finally {
       setIsLoad(false)
@@ -58,7 +59,7 @@ function App() {
           timeInScreen(setIsCreated);
         }
       } catch (error) {
-        setIsError(true);
+        timeInScreen(setIsError);
 
       } finally {
         setIsLoad(false)
@@ -79,7 +80,7 @@ function App() {
           timeInScreen(setIsDelete);
         }
       } catch (error) {
-        setIsError(error);
+        timeInScreen(setIsError);
 
       } finally {
         setIsLoad(false)
@@ -106,7 +107,7 @@ function App() {
           timeInScreen(setIsUpdate);
         }
       } catch (error) {
-        setIsError(error);
+        timeInScreen(setIsError);
 
       } finally {
         setIsLoad(false)
@@ -133,6 +134,8 @@ function App() {
       modifyObject={modifyObject}
     />;
 
+
+const componentError = <Error/>
   const componentLoad = <Load />
   const componentCreate = <PopUp
     text={'Producto creado con exito!'}
@@ -151,6 +154,7 @@ function App() {
 
   return (
     <div className="App">
+      {isError&&componentError}
 
       {isLoad && componentLoad}
       {isCreated && componentCreate}
