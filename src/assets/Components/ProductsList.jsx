@@ -5,11 +5,20 @@ const ProductsList = ({ dataForm, deleteButton, modifyButton, deleteObeject, mod
   return (
     <ul className='ul'>
       {dataForm.map((obejectForm, index) =>
-        <li className='ul__li' key={index}>
-          <h2 className='ul__li--h2' >Nombre: {obejectForm.name}</h2>
-          <h3 className='ul__li--h3' >Categoria: {obejectForm.category}</h3>
-          <h3 className='ul__li--h3' >Precio: {obejectForm.price}</h3>
-          <h4 className='ul__li--h4' >Disponibilidad: {String(obejectForm.isAvailable)}</h4>
+        <li className={obejectForm.isAvailable
+          ?
+          'ul__li--disponible'
+          :
+          'ul__li--NoDisponible'}
+          key={index}>
+          <h2 className='ul__li--h2' ><span >Nombre: </span>{obejectForm.name}</h2>
+          <h3 className='ul__li--h3' ><span>Categoria: </span> {obejectForm.category}</h3>
+          <h3 className='ul__li--h3' > <span>Precio: </span> {obejectForm.price}</h3>
+          {obejectForm.isAvailable ?
+            <h4 className='ul__li--h4' >Disponible </h4>
+            :
+            <h4 className='ul__li--h4' >No Disponible</h4>
+          }
           <div className='ul__li--div'>
             <button className='ul__li--button' onClick={() => deleteObeject(obejectForm)}>{deleteButton}</button>
             <button className='ul__li--button' onClick={() => modifyObject(obejectForm)}>{modifyButton}</button>
@@ -21,3 +30,5 @@ const ProductsList = ({ dataForm, deleteButton, modifyButton, deleteObeject, mod
 };
 
 export default ProductsList;
+
+
