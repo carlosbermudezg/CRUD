@@ -58,7 +58,7 @@ function App() {
           timeInScreen(setIsCreated);
         }
       } catch (error) {
-        setIsError(error);
+        setIsError(true);
 
       } finally {
         setIsLoad(false)
@@ -70,7 +70,7 @@ function App() {
   //  DELETE request 
   const deleteObeject = (body) => {
 
-    const postData = async () => {
+    const deleteData = async () => {
       setIsLoad(true)
       try {
         const reply = await axios.delete(`https://products-crud.academlo.tech/products/${body.id}/`);
@@ -86,7 +86,7 @@ function App() {
       };
     };
     setUpdateProducts(null)
-    postData();
+    deleteData();
 
   };
 
@@ -97,7 +97,7 @@ function App() {
 
   const sendFormToApp = (body) => {
 
-    const postData = async () => {
+    const putData = async () => {
       setIsLoad(true)
       try {
         const reply = await axios.put(`https://products-crud.academlo.tech/products/${body.id}/`, body);
@@ -113,7 +113,7 @@ function App() {
       };
     }
     setUpdateProducts(null)
-    postData();
+    putData();
   }
 
   // componentes
@@ -133,29 +133,29 @@ function App() {
       modifyObject={modifyObject}
     />;
 
-    const componentLoad= <Load/>
-    const componentCreate= <PopUp
+  const componentLoad = <Load />
+  const componentCreate = <PopUp
     text={'Producto creado con exito!'}
     imagen={'cheque.png'}
-    />
-    const componentDelete= <PopUp
+  />
+  const componentDelete = <PopUp
     text={'Producto eliminado con exito!'}
     imagen={'delete.png'}
-    />
-    const componentEdit= <PopUp
+  />
+  const componentEdit = <PopUp
     text={'Producto modificado con exito!'}
     imagen={'edit.png'}
-    />
-    
+  />
 
- 
+
+
   return (
     <div className="App">
 
-      {isLoad&&componentLoad}
-      {isCreated&&componentCreate}
-      {isDelete&&componentDelete}
-      {isUpdate&&componentEdit}
+      {isLoad && componentLoad}
+      {isCreated && componentCreate}
+      {isDelete && componentDelete}
+      {isUpdate && componentEdit}
 
       {componentProductsForm}
 
