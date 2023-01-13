@@ -188,7 +188,7 @@ span{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(112, 107, 107, 0.356);
+  background-color: rgba(94, 90, 90, 0.623);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,6 +209,7 @@ span{
 .div__h2--popUp{
   color: var(--text-color);
   font-size: 30px;
+  text-align: center;
 }
 .div__img--popUp{
   width: 50px;
