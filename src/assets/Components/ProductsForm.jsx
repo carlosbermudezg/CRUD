@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 
 const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendFormToApp }) => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [isChecked, setIsChecked] = useState(true);
 
   const getFormData = (data) => {
     if (sendAppToForm === null) {
@@ -47,8 +48,13 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
           {...register('name', { required: true })}
         />
         <i className='icon bx bx-store-alt'></i>
-        {errors.name && <span className='span__error'>Este campo es requerido</span>}
+        {
+          errors.name
+          &&
+          <label htmlFor='name-id' className='label__error'>Este campo es requerido</label>
+        }
       </div>
+
       <div className='form__div'>
         <label className="form__div--label" htmlFor="category-id">Category </label>
         <input className='label__div--input'
@@ -57,8 +63,13 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
           {...register('category', { required: true })}
         />
         <i className='icon bx bx-category' ></i>
-        {errors.category && <span className='span__error'>Este campo es requerido</span>}
+        {
+          errors.category
+          &&
+          <label htmlFor='category-id' className='label__error'>Este campo es requerido</label>
+        }
       </div>
+
       <div className='form__div'>
         <label className="form__div--label" htmlFor="price-id">Price </label>
         <input className='label__div--input'
@@ -67,15 +78,25 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
           {...register('price', { required: true })}
         />
         <i className='icon bx bx-purchase-tag-alt' ></i>
-        {errors.price && <span className='span__error'>Este campo es requerido</span>}
+        {
+          errors.price
+          &&
+          <label htmlFor='price-id' className='label__error'>Este campo es requerido</label>
+        }
       </div>
+
       <div className='form__div'>
         <label className="form__div--label" htmlFor="isAvailable-id">Available </label>
-        <input className='label__div--input form__label--inputCheckbox'
+        <div className='form__div--switch'>
+          <input className='label__div--input form__label--inputCheckbox'
           type="checkbox"
           id="isAvailable-id"
           {...register('isAvailable')}
+          checked={isChecked}
+          onChange={() => setIsChecked(!isChecked)}
         />
+        </div>
+
       </div>
 
       <button className="form-button" type='submit'>{submitButton}</button>

@@ -11,9 +11,9 @@ const ProductsList = ({ dataForm, deleteButton, modifyButton, deleteObeject, mod
           :
           'ul__li--NoDisponible'}
           key={index}>
-          <h2 className='ul__li--h2' ><span >Nombre: </span>{obejectForm.name}</h2>
-          <h3 className='ul__li--h3' ><span>Categoria: </span> {obejectForm.category}</h3>
-          <h3 className='ul__li--h3' > <span>Precio: </span> {obejectForm.price}</h3>
+          <h2 className='ul__li--h2' ><span className='li__h2--span' >Nombre: </span>{obejectForm.name}</h2>
+          <h3 className='ul__li--h3' ><span className='li__h2--span'>Categoria: </span> {obejectForm.category}</h3>
+          <h3 className='ul__li--h3' ><span className='li__h2--span'>Precio: </span> {obejectForm.price}</h3>
           {obejectForm.isAvailable ?
             <div className='ul__li--divAvailable'>
               <h4 className='ul__li--h4'>Disponible <img className='icon--available' src="/cheque.png" alt="Disponible" />
