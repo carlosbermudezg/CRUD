@@ -192,6 +192,7 @@ span {
 .ul__li--button:hover {
   box-shadow: var(--shadow-elevation-high);
   cursor: pointer;
+  background-color: var(--tertiary-color);
 }
 
 .button--icon {
