@@ -129,7 +129,7 @@ function App() {
     <ProductsList
       dataForm={data}
       deleteButton={'/delete.png'}
-      modifyButton={'/public/edit.png'}
+      modifyButton={'/edit.png'}
       deleteObeject={deleteObeject}
       modifyObject={modifyObject}
     />;
