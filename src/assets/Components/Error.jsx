@@ -1,9 +1,8 @@
-import React from 'react';
-
 const Error = () => {
   return (
-    <div>
-      <h2>Ups... Se ha producido un error! Intente nuevamete</h2>
+    <div className='div--error'>
+      <h2 className='div__h2--error'>Ups... Se ha producido un error. Intente nuevamete!</h2>
+      <img className='div__img--error'src="/computadora.png" alt="error" />
     </div>
   );
 };
