@@ -41,7 +41,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
   return (
     <form className="form" onSubmit={handleSubmit(getFormData)}>
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="name-id">Name</label>
+        <label className="form__div--label" htmlFor="name-id">Nombre</label>
         <input className='label__div--input'
           type="text"
           id="name-id"
@@ -56,7 +56,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
       </div>
 
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="category-id">Category </label>
+        <label className="form__div--label" htmlFor="category-id">Categoria </label>
         <input className='label__div--input'
           type="text"
           id="category-id"
@@ -71,7 +71,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
       </div>
 
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="price-id">Price </label>
+        <label className="form__div--label" htmlFor="price-id">Precio </label>
         <input className='label__div--input'
           type="number"
           id="price-id"
@@ -86,7 +86,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
       </div>
 
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="isAvailable-id">Available </label>
+        <label className="form__div--label" htmlFor="isAvailable-id">Disponible </label>
         <div className='form__div--switch'>
           <input className='label__div--input form__label--inputCheckbox'
           type="checkbox"
