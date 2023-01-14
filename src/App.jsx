@@ -128,14 +128,14 @@ function App() {
   const componentProductsList =
     <ProductsList
       dataForm={data}
-      deleteButton={'Delete'}
-      modifyButton={'Moddify'}
+      deleteButton={'/delete.png'}
+      modifyButton={'/public/edit.png'}
       deleteObeject={deleteObeject}
       modifyObject={modifyObject}
     />;
 
 
-const componentError = <Error/>
+  const componentError = <Error />
   const componentLoad = <Load />
   const componentCreate = <PopUp
     text={'Producto creado con exito!'}
@@ -154,7 +154,7 @@ const componentError = <Error/>
 
   return (
     <div className="App">
-      {isError&&componentError}
+      {isError && componentError}
 
       {isLoad && componentLoad}
       {isCreated && componentCreate}

@@ -44,24 +44,30 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
         <input className='label__div--input'
           type="text"
           id="name-id"
-          {...register('name',{ required: true })}
+          {...register('name', { required: true })}
         />
+        <i className='icon bx bx-store-alt'></i>
+        {errors.name && <span className='span__error'>Este campo es requerido</span>}
       </div>
       <div className='form__div'>
         <label className="form__div--label" htmlFor="category-id">Category </label>
         <input className='label__div--input'
           type="text"
           id="category-id"
-          {...register('category',{ required: true })}
+          {...register('category', { required: true })}
         />
+        <i className='icon bx bx-category' ></i>
+        {errors.category && <span className='span__error'>Este campo es requerido</span>}
       </div>
       <div className='form__div'>
         <label className="form__div--label" htmlFor="price-id">Price </label>
         <input className='label__div--input'
           type="number"
           id="price-id"
-          {...register('price',{ required: true })}
+          {...register('price', { required: true })}
         />
+        <i className='icon bx bx-purchase-tag-alt' ></i>
+        {errors.price && <span className='span__error'>Este campo es requerido</span>}
       </div>
       <div className='form__div'>
         <label className="form__div--label" htmlFor="isAvailable-id">Available </label>
