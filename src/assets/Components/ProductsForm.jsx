@@ -44,7 +44,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
         <input className='label__div--input'
           type="text"
           id="name-id"
-          {...register('name')}
+          {...register('name',{ required: true })}
         />
       </div>
       <div className='form__div'>
@@ -52,7 +52,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
         <input className='label__div--input'
           type="text"
           id="category-id"
-          {...register('category')}
+          {...register('category',{ required: true })}
         />
       </div>
       <div className='form__div'>
@@ -60,7 +60,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
         <input className='label__div--input'
           type="number"
           id="price-id"
-          {...register('price')}
+          {...register('price',{ required: true })}
         />
       </div>
       <div className='form__div'>
