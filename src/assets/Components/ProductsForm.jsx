@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendFormToApp }) => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const [isChecked, setIsChecked] = useState(true);
+
 
   const getFormData = (data) => {
     if (sendAppToForm === null) {
@@ -91,9 +91,7 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
           <input className='label__div--input form__label--inputCheckbox'
           type="checkbox"
           id="isAvailable-id"
-          {...register('isAvailable')}
-          checked={isChecked}
-          onChange={() => setIsChecked(!isChecked)}
+          {...register('isAvailable')}   
         />
         </div>
 
