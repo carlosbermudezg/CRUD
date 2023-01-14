@@ -64,8 +64,8 @@
 }
 
 .form__div--switch {
-  max-width:70px;
-  height: 25px;
+  max-width:65px;
+  height: 45px;
   background-color: #ff4081;
   display: flex;
   align-self: flex-start;
@@ -73,28 +73,25 @@
   margin: 10px 0;
 }
 
-.form__label--inputCheckbox:checked {
+ .form__label--inputCheckbox:checked  {
   background-color:var(--tertiary-color);
   margin-left: 0;
   transition: all 1s;
 }
 
-.form__label--inputCheckbox {
+ .form__label--inputCheckbox {
   margin: 0;
   padding: 0;
   border: none;
   appearance: none;
   border-radius: 5px;
   background-color:var(--text-color);
-  min-width: 35px;
-  min-height: 35px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
-  margin-left: calc(70px - 35px);
+  margin-left: calc(60px - 35px);
   transition: all 1s ease;
 }
-
-
-
 
 .form-button {
   border: none;
