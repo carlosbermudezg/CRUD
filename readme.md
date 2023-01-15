@@ -1,12 +1,12 @@
 ## Descripción  🇦🇷🇪🇸
 
-  Me complace anunciar mi último proyecto, un sistema CRUD (Crear, Leer, Actualizar y Eliminar) para controlar productos. Diseñado para facilitar el manejo de inventario de una tienda comercial. Utilice peticiones GET, PUT, POST y DELETE en React. 
-  
-  Este proyecto se puede ver en Github y en línea. ¡Los invito a visitar y compartir!
+ Este proyecto es un sistema CRUD (Crear, Leer, Actualizar y Eliminar) para controlar productos. Diseñado para facilitar el manejo de inventario de una tienda comercial. Utilice peticiones GET, PUT, POST y DELETE en React. 
+ 
+ Se puede ver en Github y en línea. ¡Los invito a visitar y compartir!
 
-  I am excited to announce my latest project, a CRUD (Create, Read, Update and Delete) system for managing products. It is designed to streamline inventory management for a commercial store. 
-  
-  I used GET, PUT, POST and DELETE requests in React. This project can be viewed on Github and online. I invite you to visit and share!
+This project is a CRUD (Create, Read, Update and Delete) system for managing products. Designed to streamline inventory management for a commercial store. 
+
+I used GET, PUT, POST and DELETE requests in React. This project can be viewed on Github and online. I invite you to visit and share!
 
 
 ## Autor 
