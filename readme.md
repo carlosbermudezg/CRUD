@@ -41,7 +41,7 @@
 	Este proyecto necesita instalación de node modules. Para ello haga npm install o simplemte npm i 
 
 ## Contratación 
-	Si quieres contratarme puedes escribirme a gabrielalejandromartinez4@gmail.com
+	Si quieres contratarme puedes escribirme a gmartinezgabrielalejandro4@gmail.com
 
 ## Licencia
 
