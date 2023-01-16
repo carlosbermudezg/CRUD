@@ -33,7 +33,7 @@
 
 ## Ver ejemplo en vivo
 
-	- [https://ghiomacrud.netlify.app/](https://ghiomacrud.netlify.app/)
+[https://ghiomacrud.netlify.app/](https://ghiomacrud.netlify.app/)
 ![Image text](https://github.com/gabrielmartinezghioma/ReactAcademloWoork3/blob/main/public/screen.png)
 
 ## Instalacion 
