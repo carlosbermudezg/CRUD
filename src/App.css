@@ -47,7 +47,7 @@
 .label__div--input {
   list-style: none;
   box-sizing: border-box;
-  padding: 5px 10px 5px 30px;
+  padding: 5px 10px 5px 5px;
   border: 0;
   margin: 10px 0 20px 0;
   width: 100%;

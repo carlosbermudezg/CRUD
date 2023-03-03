@@ -31,7 +31,7 @@ function App() {
   const getData = async () => {
     setIsLoad(true)
     try {
-      const reply = await axios.get('https://products-crud.academlo.tech/products/')
+      const reply = await axios.get('https://users-crud-b68s.onrender.com/users/')
       if (reply.status === 200) {
         useData(reply.data)
       }
@@ -53,7 +53,7 @@ function App() {
     const postData = async () => {
       setIsLoad(true)
       try {
-        const reply = await axios.post('https://products-crud.academlo.tech/products/', body);
+        const reply = await axios.post('https://users-crud-b68s.onrender.com/users/', body);
         if (reply.status === 201) {
           getData();
           timeInScreen(setIsCreated);
@@ -74,7 +74,7 @@ function App() {
     const deleteData = async () => {
       setIsLoad(true)
       try {
-        const reply = await axios.delete(`https://products-crud.academlo.tech/products/${body.id}/`);
+        const reply = await axios.delete(`https://users-crud-b68s.onrender.com/users/${body.id}/`);
         if (reply.status === 204) {
           getData();
           timeInScreen(setIsDelete);
@@ -101,7 +101,7 @@ function App() {
     const putData = async () => {
       setIsLoad(true)
       try {
-        const reply = await axios.put(`https://products-crud.academlo.tech/products/${body.id}/`, body);
+        const reply = await axios.put(`https://users-crud-b68s.onrender.com/users/${body.id}/`, body);
         if (reply.status === 200) {
           getData();
           timeInScreen(setIsUpdate);
@@ -138,15 +138,15 @@ function App() {
   const componentError = <Error />
   const componentLoad = <Load />
   const componentCreate = <PopUp
-    text={'Producto creado con exito!'}
+    text={'Usuario creado con exito!'}
     imagen={'cheque.png'}
   />
   const componentDelete = <PopUp
-    text={'Producto eliminado con exito!'}
+    text={'Usuario eliminado con exito!'}
     imagen={'delete.png'}
   />
   const componentEdit = <PopUp
-    text={'Producto modificado con exito!'}
+    text={'Usuario modificado con exito!'}
     imagen={'edit.png'}
   />
 

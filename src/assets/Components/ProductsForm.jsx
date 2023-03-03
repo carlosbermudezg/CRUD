@@ -11,10 +11,11 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
       sendOfProducsForm(data);
       reset(
         {
-          name: '',
-          category: '',
-          price: '',
-          isAvailable: false
+          first_name: '',
+          last_name: '',
+          email: '',
+          password: '',
+          birthday: ''
         }
       )
     } else {
@@ -26,10 +27,11 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
     if (sendAppToForm === null) {
       reset(
         {
-          name: '',
-          category: '',
-          price: '',
-          isAvailable: false
+          first_name: '',
+          last_name: '',
+          email: '',
+          password: '',
+          birthday: ''
         }
       )
 
@@ -41,60 +43,72 @@ const ProductsForm = ({ submitButton, sendOfProducsForm, sendAppToForm, sendForm
   return (
     <form className="form" onSubmit={handleSubmit(getFormData)}>
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="name-id">Nombre</label>
+        <label className="form__div--label" htmlFor="first-name">Name</label>
         <input className='label__div--input'
           type="text"
-          id="name-id"
-          {...register('name', { required: true })}
+          id="first-name"
+          {...register('first_name', { required: true })}
         />
-        <i className='icon bx bx-store-alt'></i>
         {
-          errors.name
+          errors.first_name
           &&
-          <label htmlFor='name-id' className='label__error'>Este campo es requerido</label>
+          <label htmlFor='first-name' className='label__error'>Este campo es requerido</label>
         }
       </div>
 
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="category-id">Categoria </label>
+        <label className="form__div--label" htmlFor="last_name">Last Name </label>
         <input className='label__div--input'
           type="text"
-          id="category-id"
-          {...register('category', { required: true })}
+          id="last_name"
+          {...register('last_name', { required: true })}
         />
-        <i className='icon bx bx-category' ></i>
         {
-          errors.category
+          errors.last_name
           &&
-          <label htmlFor='category-id' className='label__error'>Este campo es requerido</label>
+          <label htmlFor='last_name' className='label__error'>Este campo es requerido</label>
         }
       </div>
 
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="price-id">Precio </label>
+        <label className="form__div--label" htmlFor="email">Email </label>
         <input className='label__div--input'
-          type="number"
-          id="price-id"
-          {...register('price', { required: true })}
+          type="text"
+          id="email"
+          {...register('email', { required: true })}
         />
-        <i className='icon bx bx-purchase-tag-alt' ></i>
         {
-          errors.price
+          errors.email
           &&
-          <label htmlFor='price-id' className='label__error'>Este campo es requerido</label>
+          <label htmlFor='email' className='label__error'>Este campo es requerido</label>
         }
       </div>
 
       <div className='form__div'>
-        <label className="form__div--label" htmlFor="isAvailable-id">Disponible </label>
-        <div className='form__div--switch'>
-          <input className='label__div--input form__label--inputCheckbox'
-          type="checkbox"
-          id="isAvailable-id"
-          {...register('isAvailable')}   
+        <label className="form__div--label" htmlFor="email">Password </label>
+        <input className='label__div--input'
+          type="password"
+          id="password"
+          {...register('password', { required: true })}
         />
-        </div>
-
+        {
+          errors.password
+          &&
+          <label htmlFor='password' className='label__error'>Este campo es requerido</label>
+        }
+      </div>
+      <div className='form__div'>
+        <label className="form__div--label" htmlFor="birthday">Birthday </label>
+        <input className='label__div--input'
+          type="date"
+          id="birthday"
+          {...register('birthday', { required: true })}
+        />
+        {
+          errors.birthday
+          &&
+          <label htmlFor='birthday' className='label__error'>Este campo es requerido</label>
+        }
       </div>
 
       <button className="form-button" type='submit'>{submitButton}</button>
